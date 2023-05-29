@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#header {
+    height: 88px;
+    padding: 0 40px;
+    font-size: 14px;
+    font-weight: 400px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#header.ontop {
+    background-color: white;
+}
+
+#header .item-cart {
+    margin-left: 6px;
+    margin-right: 6px;
+    color: black;
+    float: right;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin-left: auto;
+    border-radius: 4px;
+    box-shadow: 0 0 1px rgb(0, 0, 0, 0.3);
+}
+
+#header .item-login-out {
+    margin-left: 6px;
+    margin-right: 6px;
+    color: black;
+    background-color: white;
+    width: 138px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 4px;
+    box-shadow: 0 0 1px rgb(0, 0, 0, 0.3);
+}
+
+#header .item-language {
+    margin-left: 6px;
+    margin-right: 6px;
+    color: black;
+    height: 40px;
+    min-width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 4px;
+    position: relative;
+    margin-right: 150px;
+    box-shadow: 0 0 1px rgb(0, 0, 0, 0.3);
+}
+
+#header .item-language:hover .a-item-language {
+    cursor: pointer;
+}
+
+#header .a-item-language {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: white;
+    border: none;
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+}
+
+#header .ti-angle-down {
+    font-size: 8px;
+    margin-top: 2px;
+    margin-left: 6px;
+}
+
+#header .sub-language {
+    display: none;
+}
+
+#header .sub-language.open{
+    display: block;
+    position: absolute;
+    bottom: -90px;
+    right: 0px;
+    top: 40px;
+}
+
+#header .sub-language li {
+    list-style-type: none;
+    display: block;
+    min-width: 148px;
+    line-height: 40px;
+    background-color: white;
+    padding: 0px 12px;
+    font-weight: 500;
+    font-size: 12px;
+    left: 0;
+}
+
+#header .sub-language li:hover {
+    background-color: rgb(172, 170, 170);
+}
+
+#header .sub-language .lg-tv {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin-top: 8px;
+}
+
+#header .sub-language .lg-ta {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+#content {
+    width: 100%;
+    min-height: 1000px;
+}
+
+#content .content-background {
+    width: 100%;
+    min-height: 388px;
+    background: url("/img/slider1.jpg") no-repeat top center / cover;
+    position: relative;
+}
