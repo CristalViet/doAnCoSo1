@@ -27,17 +27,18 @@
         </div>
         
         <div class = "item-language">
-            <button class = "a-item-language js-select-language">vi
+            <button class = "a-item-language js-select-language"><span class="sBtn">VI</span>
                 <ul class = "sub-language">
-                    <li class = "lg-tv">
-                        <div>Tiếng Việt</div>
+                    <li class = "lg">
+                        Tiếng Việt
                     </li>
-                    <li class = "lg-ta">
-                        <div>English</div>
+                    <li class = "lg">
+                        English
                     </li>
                 </ul>
-                <i class = "ti-angle-down"></i>
+                
             </button>
+            <i class = "ti-angle-down"></i>
             
         </div>
     </div>
@@ -49,14 +50,29 @@
     </div>
 
     <script>
+        const item_language=document.querySelector('.item-language')
         const language = document.querySelector('.js-select-language')
         const sublanguage = document.querySelector('.sub-language')
-        const leave = document.getElementById("header")
+        const leave = document.getElementById("header"),
+            elementOfLang=sublanguage.querySelectorAll('.lg')
+            sBtn=language.querySelector('.sBtn')
+            
 
         function showLanguageSelect() {
             sublanguage.classList.add('open')
+            item_language.classList.add('arrow-down')
 
-        }
+        }   
+        elementOfLang.forEach( language=>{
+            language.addEventListener('click',()=>{
+                let textLang=language.innerText;
+            if(textLang==='TIẾNG VIỆT'){
+                sBtn.innerText='VI'
+            }
+            else sBtn.innerText='EN'
+            })
+          
+        })
 
         function test () {
             alert("Show")
@@ -67,6 +83,7 @@
             const target = event.target
             if (target != sublanguage && target != language) {
                 sublanguage.classList.remove('open')
+                item_language.classList.remove('arrow-down')
             }
         }
 
