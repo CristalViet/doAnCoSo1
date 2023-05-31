@@ -140,3 +140,45 @@
     background: url("/img/slider1.jpg") no-repeat top center / cover;
     position: relative;
 }
+
+.item-language.arrow-down .ti-angle-down{
+    transform: rotate(-180deg);
+    transition: 0.2s;
+}
+.item-language .ti-angle-down{
+   
+    transition: 0.2s;
+}
+
+.footer .link-service a{
+    text-decoration: none;
+    color: white;
+}
+.footer .link-service i{
+    font-size: 24px;
+}
+.footer{
+    padding: 50px 50px;
+}
+.footer .content-footer{
+    width: 80%;
+}
+.diviver{
+    margin-top: 24px;
+    margin-bottom: 24px;
+    width: 100%;
+    height: 1px;
+    background-color: hsla(0,0%,100%,.3);
+}
+.endfooter a{
+    text-decoration: none;
+    color: white;
+    margin-top: 10px;
+}
+.content-footer .NameBrand{
+    
+}
+.content-footer .NameBrand img{
+    width: 180px;
+    height: 75px;
+}
