@@ -150,6 +150,40 @@
     transition: 0.2s;
 }
 
+#content .content-text {
+    width: 80%;
+}
+
+.list_style::marker{
+    list-style-image: url(/img/tick.svg);
+    
+}
+.list_style span{
+    font-weight: bolder;
+}
+.readmore{
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid black;
+   padding: 15px 15px;
+    line-height: 1.42857143;
+    text-align: center;
+    font-weight: 700;
+    height: 48px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.readmore span{
+   
+    margin: auto;
+}
+.readmore:hover{
+    color: red;
+}
+.content-hidden{
+    display: none;
+}
 .footer .link-service a{
     text-decoration: none;
     color: white;
