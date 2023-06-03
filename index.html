@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./fonts/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./font-awesome-6-pro-public-/css/all.min.css">
     <title>Document</title>
 </head>
 <body>
-    
     <div id="header">
-        <div class = "item-cart">
+        <div class = "item-cart js-select-cart">
             <div class = "contain-item">
                 <i class = "ti-shopping-cart" ></i>
             </div>
@@ -35,17 +35,210 @@
             
         </div>
     </div>
+    <div class="container-cart">
+        <div class="container-cart empty js-close-cart">
 
+        </div>
+        <div class="container-cart main-cart">
+        </div>
+    </div>
     <div id="content">
         <div class="content-background">
         </div>
-        
-    </div>
+        <div class="content-empty">
+            <div class="content-emmty-invite">
+                <h3 class="invite-goodmorning">
+                    Good Morning
+                </h3>
+                <h2 class="sub-invite">
+                    Where should we deliver your food today?
+                </h2>
+                <input type="text" class = "invite-input-address">
+                <button class = "invite-find">Tìm kiếm</button>
+            </div>
+        </div>
+        <div class="store-recomend">
+            <span>Ưu đãi xung quanh trường</span>
+            <span class = "v">V</span>
+            <span class = "k">K</span>
+            <span class = "u">U</span>
+        </div>
+        <ul class="content-store">
+            <li class="store">
+                <div class="store-sub">
+                    <div class="store-img">
+                        <img src="/img/store-img/store-1.png" alt="">
+                    </div>
+                    <div class="store-info">
+                        <p class="store-name">
+                            Quán cô Thắm
+                        </p>
+                        <p class="store-mainproduct">
+                            Cơm
+                        </p>
+                        <div class="store-status">
+                            <i class="fa-solid fa-star"></i>
+                            <p class="store-point">4.6</p>
+                            <i class="fa-thin fa-clock"></i>
+                            <p class="status">Đang mở cửa</p>
+                            <i class="fa-sharp fa-solid fa-circle"></i>
+                        </div>
+                        <div class="cost-ship-product">
+                            <img src="/img/icon/icon-promo-tag.svg" alt="">
+                            <p class="free">Free ship</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="store">
+                <div class="store-sub">
+                    <div class="store-img">
+                        <img src="/img/store-img/store-1.png" alt="">
+                    </div>
+                    <div class="store-info">
+                        <p class="store-name">
+                            Quán cô Thắm
+                        </p>
+                        <p class="store-mainproduct">
+                            Cơm
+                        </p>
+                        <div class="store-status">
+                            <i class="fa-solid fa-star"></i>
+                            <p class="store-point">4.6</p>
+                            <i class="fa-thin fa-clock"></i>
+                            <p class="status">Đang mở cửa</p>
+                            <i class="fa-sharp fa-solid fa-circle"></i>
+                        </div>
+                        <div class="cost-ship-product">
+                            <img src="/img/icon/icon-promo-tag.svg" alt="">
+                            <p class="free">Free ship</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="store">
+                <div class="store-sub">
+                    <div class="store-img">
+                        <img src="/img/store-img/store-1.png" alt="">
+                    </div>
+                    <div class="store-info">
+                        <p class="store-name">
+                            Quán cô Thắm
+                        </p>
+                        <p class="store-mainproduct">
+                            Cơm
+                        </p>
+                        <div class="store-status">
+                            <i class="fa-solid fa-star"></i>
+                            <p class="store-point">4.6</p>
+                            <i class="fa-thin fa-clock"></i>
+                            <p class="status">Đang mở cửa</p>
+                            <i class="fa-sharp fa-solid fa-circle"></i>
+                        </div>
+                        <div class="cost-ship-product">
+                            <img src="/img/icon/icon-promo-tag.svg" alt="">
+                            <p class="free">Free ship</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="store">
+                <div class="store-sub">
+                    <div class="store-img">
+                        <img src="/img/store-img/store-1.png" alt="">
+                    </div>
+                    <div class="store-info">
+                        <p class="store-name">
+                            Quán cô Thắm
+                        </p>
+                        <p class="store-mainproduct">
+                            Cơm
+                        </p>
+                        <div class="store-status">
+                            <i class="fa-solid fa-star"></i>
+                            <p class="store-point">4.6</p>
+                            <i class="fa-thin fa-clock"></i>
+                            <p class="status">Đang mở cửa</p>
+                            <i class="fa-sharp fa-solid fa-circle"></i>
+                        </div>
+                        <div class="cost-ship-product">
+                            <img src="/img/icon/icon-promo-tag.svg" alt="">
+                            <p class="free">Free ship</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class = "store-see-all">
+            <p class="see-all">
+                See all store
+            </p>
+        </div>
+        <div class="food-type">
+            <span>
+                There's something for everyone!
+            </span>
+        </div>
+        <ul class="content-store">
+            <li class="store">
+                <div class="store-sub">
+                    <div class="store-img">
+                        <img src="/img/store-img/store-1.png" alt="">
+                    </div>
+                    <div class="store-info">
+                        <p class="store-name">
+                            Quán cô Thắm
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="store">
+                <div class="store-sub">
+                    <div class="store-img">
+                        <img src="/img/store-img/store-1.png" alt="">
+                    </div>
+                    <div class="store-info">
+                        <p class="store-name">
+                            Quán cô Thắm
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="store">
+                <div class="store-sub">
+                    <div class="store-img">
+                        <img src="/img/store-img/store-1.png" alt="">
+                    </div>
+                    <div class="store-info">
+                        <p class="store-name">
+                            Quán cô Thắm
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="store">
+                <div class="store-sub">
+                    <div class="store-img">
+                        <img src="/img/store-img/store-1.png" alt="">
+                    </div>
+                    <div class="store-info">
+                        <p class="store-name">
+                            Quán cô Thắm
+                        </p>
+                    </div>
+                </div>
+            </li>
+            
+        </ul>
 
+    </div>
     <script>
         const language = document.querySelector('.js-select-language')
         const sublanguage = document.querySelector('.sub-language')
         const leave = document.getElementById("header")
+        const cart = document.querySelector('.js-select-cart')
+        const arrayCart = document.querySelectorAll('.container-cart')
+        const emptyCart = document.querySelector('.js-close-cart')
 
         function showLanguageSelect() {
             sublanguage.classList.add('open')
@@ -71,6 +264,20 @@
             }
         }
 
+        function closeCart () {
+            arrayCart.forEach(element => {
+            element.classList.remove('open')
+            }) 
+        }
+
+        function openCart () {
+            arrayCart.forEach(element => {
+                element.classList.add('open')
+            })
+        }
+
+        emptyCart.addEventListener('click', closeCart)
+        cart.addEventListener('click', openCart)
         language.addEventListener('click', showLanguageSelect)
         document.addEventListener('click', unshowLanguageSelect)
         window.addEventListener('scroll', headerChangeBackground)
