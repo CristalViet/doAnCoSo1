@@ -8,6 +8,7 @@
 
 .content{
     min-height: 100vh;
+    /* background-color: #fff; */
     background: linear-gradient(-135deg,#c850c0,#4158d0);
     position: relative;
 }
@@ -21,6 +22,7 @@
     position: absolute;
     background-color: white;
     border-radius: 5px;
+    /* padding: 10px; */
     padding: 10px 0px;
     width: 60%;
     height: auto;
@@ -30,6 +32,7 @@
     transform: translate(-50%,-50%);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.755);
 }
+
 .login-form img {
     border-radius: 4px;
 }
@@ -48,6 +51,18 @@
 .login-form .passwordform:focus,
 .login-form .emailform:focus {
     border: 1px solid green;
+}
+
+.login-form .input-sendcode {
+    position: relative;
+}
+
+.login-form .input-sendcode .sendcode {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    font-size: 14px;
+    
 }
 
 .login-right{
