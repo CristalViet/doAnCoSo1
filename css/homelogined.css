@@ -58,15 +58,42 @@
     margin-right: 6px;
     color: black;
     background-color: white;
-    width: 138px;
+    width: 40px;
     height: 40px;
-    text-align: center;
-    line-height: 40px;
-    font-size: 12px;
-    font-weight: 500;
-    border-radius: 4px;
+    border-radius: 50%;
     box-shadow: 0 0 1px rgb(0, 0, 0, 0.3);
     cursor: pointer;
+    position: relative;
+}
+
+#header .item-login-out img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#header .item-login-out .logout {
+    display: none;
+    position: absolute;
+    height: 40px;
+    background-color: #fff;
+    width: 80px;
+    bottom: -50px;
+    left: -20px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 4px;
+    box-shadow: 0 0 1px rgb(0, 0, 0, 0.3);
+    font-weight: 500;
+    font-size: 12px;
+}
+
+#header .item-login-out .logout.open {
+    display: block;
+}
+
+#header .item-login-out .logout:hover {
+    background-color: #959595;
 }
 
 #header .item-language {
@@ -313,25 +340,15 @@
 
 #content ul.content-store {
     display: flex;
-    /* flex-wrap: wrap; */
-    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    justify-content: space-between;
     list-style: none;
     margin-left: 155px;
     margin-right: 155px;
-    overflow: hidden;
-    position: relative;
-}
-
-#content ul.content-store .btn-left {
-    position: absolute;
-    left: -20px;
-    top: 50%;
-    font-size: 30px;
 }
 
 #content ul.content-store li {
-    /* flex-basis: 25%; */
-    min-width: 294px;
+    flex-basis: 25%;
     padding-left: 15px;
     padding-right: 15px;
     box-sizing: border-box;
