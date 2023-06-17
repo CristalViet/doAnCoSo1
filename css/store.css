@@ -202,6 +202,9 @@
     position: relative;
     margin-top: 32px;
     margin-left: 175px;
+    max-width: calc(100% - 175px);
+    min-height: 0;
+
 }
 
 #content .navigation {
@@ -351,4 +354,7 @@
 #content .order-day .content .fa-chevron-down {
     position: absolute;
     right: 0;
+}
+.product-menu{
+    width: 80%;
 }
