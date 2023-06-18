@@ -1,11 +1,14 @@
 html{
-    
+    scroll-margin-block: 0;
 }
 .header nav{
     
     display: flex;
     justify-content: space-between;
     float: left;
+}
+.active{
+    border-bottom: 2px solid greenyellow;
 }
 .header{
     padding-top: 10px;
@@ -14,7 +17,7 @@ html{
     height: 56px;
     display: block;
     background-color: rgb(255, 255, 255);
-    width: 80%;
+    width: 100%;
     
     
 }
@@ -34,6 +37,11 @@ html{
 .section{
    
     height: auto;
+    
+     
+}
+.section h4{
+   /* margin-bottom: 100px; */
 }
 .header nav a.active{
 
