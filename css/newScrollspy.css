@@ -1,0 +1,53 @@
+html{
+    scroll-margin-block: 0;
+}
+.header nav{
+    
+    display: flex;
+    justify-content: space-between;
+    float: left;
+}
+.active{
+    border-bottom: 2px solid greenyellow;
+}
+.header{
+    padding-top: 10px;
+    position: sticky;
+    top: 88px;
+    height: 56px;
+    display: block;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    
+    
+}
+
+.header nav a{
+
+    padding: 10px;
+    text-decoration: none;
+  
+}
+.header nav a:hover{
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid green;
+  
+}
+.section{
+   
+    height: auto;
+    
+     
+}
+.section h4{
+   /* margin-bottom: 100px; */
+}
+.header nav a.active{
+
+    border-bottom: 1px solid green;
+  
+}
+.active1{
+    padding-top: 200px;
+}
