@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.2 (81672) - https://sketch.com -->
+    <title>map pin</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="0.0%" y="0.0%" width="100.0%" height="100.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-48.0%" y="-86.2%" width="196.0%" height="272.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="map-pin" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(8.000000, 4.000000)">
+            <ellipse id="Oval-2" fill="#696262" opacity="0.300000012" filter="url(#filter-1)" cx="12.5" cy="29.0039062" rx="3.125" ry="1.74023438"></ellipse>
+            <ellipse id="Oval-2" fill="#696262" opacity="0.300000012" filter="url(#filter-2)" cx="12.5" cy="29.0039062" rx="6.25" ry="3.48046875"></ellipse>
+            <path d="M13.1454788,27.5561463 C20.4119909,21.4151015 24,16.3111386 24,12.375 C24,6.09502324 18.8535119,1 12.5,1 C6.14648812,1 1,6.09502324 1,12.375 C1,16.3111368 4.58800587,21.415097 11.8545198,27.5561451 C12.2272021,27.8711118 12.7727883,27.871113 13.1454788,27.5561463 Z" id="background" stroke="#FFFFFF" stroke-width="2" fill="#EE6352"></path>
+            <ellipse id="Oval-3" fill="#FFFFFF" cx="12.5" cy="12.375" rx="3.90625" ry="3.8671875"></ellipse>
+        </g>
+    </g>
+</svg>

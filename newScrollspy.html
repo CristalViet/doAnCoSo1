@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/newScrollspy.css">
+</head>
+<body>
+    <div class="header">
+        <div></div>
+        <nav>
+            <a href="#home" style="--clr:#ff4d4d;">Home</a>
+            <a href="#about" style="--clr:#c56cf0;">About</a>
+            <a href="#service">Service</a>
+            <a href="#Portfolio" >Portfolio</a>
+            <a href="#Contact">Contact</a>
+        </nav>
+    </div>
+    <div class="section" id="home" style="color: red;">home</div>
+    <div class="section" id="about">about</div>
+    <div class="section" id="service">service</div>
+    <div class="section" id="Portfolio">Portfolio</div>
+    <div class="section" id="Contact">Contact</div>
+</body>
+<script>
+    let sec=document.querySelectorAll('.section');
+    let links=document.querySelectorAll('nav a');
+    window.onscroll=()=>{
+        sec.forEach(section=>{
+            let top=window.scrollY;
+            let offset=section.offsetTop;
+            let height=section.offsetHeight;
+            let id=section.getAttribute('id');
+             
+            if(top>=offset&&top<offset+height){
+                links.forEach(link=>{
+
+                    link.classList.remove('active')
+                    document.querySelector('nav a[href*='+id+']').classList.add('active')
+                   
+                })
+            }
+    })
+
+        
+    }
+</script>
+</html>
