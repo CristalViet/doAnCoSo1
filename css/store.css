@@ -202,7 +202,12 @@
 }
 
 #content {
+<<<<<<< HEAD
+    width: 100%;
+    max-width: calc(100% - 175px);
+=======
     width: 80%;
+>>>>>>> 8445646f080c7e0167e34124c8c4fa9d5bf7d6f4
     z-index: 0;
     position: relative;
     margin-top: 32px;
