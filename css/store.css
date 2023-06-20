@@ -198,6 +198,7 @@
 
 #content {
     width: 100%;
+    max-width: calc(100% - 175px);
     z-index: 0;
     position: relative;
     margin-top: 32px;
