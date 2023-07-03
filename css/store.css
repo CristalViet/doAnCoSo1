@@ -58,7 +58,29 @@
     border-radius: 4px;
     box-shadow: 0 0 1px rgb(0, 0, 0, 0.3);
     cursor: pointer;
+    position: relative;
 }
+
+#header .item-cart #count-quantity {
+    display: block;
+    height: 16px;
+    width: 16px;
+    background-color: red;
+    position: absolute;
+    border-radius: 50%;
+    top: -5px;
+    right: -5px;
+    text-align: center;
+    line-height: 16px;
+    color: #fff;
+    font-size: 10px;
+}
+
+#header .item-cart #count-quantity.quantity-hidden {
+    display: none;
+}
+
+#header .item-cart #count-quantity
 
 #header .item-login-out {
     margin-left: 6px;
@@ -184,7 +206,7 @@
 }
 
 .container-cart.open {
-    z-index: 2;
+    z-index: 3;
     transition: 0.25 ease-in-out;
 }
 
