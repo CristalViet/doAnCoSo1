@@ -41,7 +41,7 @@ body{
     background-color: #00b14f;
     align-items: center;
     justify-content: center;
-    
+    cursor: pointer;
 
 }
 .boxProduct .price-box{
