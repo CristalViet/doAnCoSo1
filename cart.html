@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/cart.css">
+    <link rel="stylesheet" href="./fonts/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./font-awesome-6-pro-public-/css/all.min.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div class="logo">
+                <img src="/img/logoVKUFood.png" alt="">
+            </div>
+        </div>
+        <div class="title">
+            Giỏ hàng
+        </div>
+        <div id="wrapper-content">
+            <div id="content">
+                <ul id = "ul-listproduct" class="list-product">
+                    <li class="contain-info-product">
+                        <div class="frame">
+                            <div class="img-dish">
+                                <img src="/img/chi-trang-chia-se-cach-lam-dau-hu-nhoi-thit-mon-don-gian-va-de-an-202209091444581966.jpg" alt="">
+                            </div>
+                            <p class="dish-name">Cơm gà xối mỡ</p>
+                            <p class="dish-cost">40.000</p>
+                            <div class="quantity">
+                                <i class="fa-thin fa-square-minus"></i>
+                                <p class="dish-quantity">
+                                    2
+                                </p>
+                                <i class="fa-thin fa-square-plus"></i>
+                            </div>
+                            <p class="remove">remove</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="checkout">
+                <div class="title">
+                    Your cost
+                </div>
+                <div class="price">
+                    <p class="word">Price</p>
+                    <p class="number">₫290,000</p>
+                </div>
+                <div class="taxes">
+                    <p class="word">Taxes</p>
+                    <p class="number">Calculated at Checkout</p>
+                </div>
+                <div class="Subtotal">
+                    <p class="word">Subtotal</p>
+                    <p class="number">₫290,000</p>
+                </div>
+                <div class="checkout">
+                    Checkout
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function showcart() {
+        var addli = document.createElement('li')
+        var ulElement = document.getElementById('ul-listproduct')
+        var cart = JSON.parse (localStorage.getItem('cart'));
+        for (i = 0; i < cart.length; i++) {
+            var sp = cart[i];
+            var str = `
+                <li class="contain-info-product">
+                        <div class="frame">
+                            <div class="img-dish">
+                                <img src="`+sp[3]+`" alt="">
+                            </div>
+                            <p class="dish-name">`+sp[1]+`</p>
+                            <p class="dish-cost">`+sp[2]+`</p>
+                            <div class="quantity">
+                                <i class="fa-thin fa-square-minus"></i>
+                                <p class="dish-quantity">
+                                    `+sp[4]+`
+                                </p>
+                                <i class="fa-thin fa-square-plus"></i>
+                            </div>
+                            <p class="remove">remove</p>
+                        </div>
+                    </li>
+            `
+            addli.innerHTML = str;
+            ulElement.appendChild(addli);
+        }
+    }
+    showcart()
+</script>
+</html>

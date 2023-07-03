@@ -1,0 +1,181 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#wrapper {
+    max-width: 970px;
+    margin: 0 auto;
+}
+
+#header {
+    height: 88px;
+    font-size: 14px;
+    font-weight: 400px;
+    display: flex;
+    align-items: center;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    transition: 0.25s ease-in-out;
+    background-color: #fff;
+}
+
+#header.ontop {
+    box-shadow: 0 0 2px rgb(0, 0, 0, 0.3);
+    background-color: white;
+}
+
+#header .logo {
+    float: left;
+    cursor: pointer;
+}
+
+#header .logo img {
+    width: 120px;
+    height: 72px;
+    float: left;
+    align-items: center;
+}
+
+#wrapper-content {
+    padding-top: 80px;
+    display: flex;
+    /* background-color: aqua; */
+    min-height: 1000px;
+}
+
+#wrapper > .title {
+    display: block;
+    color: black;
+    font-size: 36px;
+    font-weight: 800px;
+    margin-top: 30px;
+}
+
+#wrapper-content li {
+    list-style-type: none;
+    display: block;
+    max-width: 650px;
+    margin-bottom: 20px;
+}
+
+#wrapper-content .frame {
+    min-width: 600px;
+    display: block;
+    position: relative;
+    min-height: 100px;
+    background-color: #fff;
+}
+
+#wrapper-content .img-dish {
+    display: block;
+    max-width: 150px;
+}
+
+#wrapper-content img {
+    width: 90%;
+}
+
+#wrapper-content .dish-name {
+    position: absolute;
+    top: 0;
+    left: 160px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#wrapper-content .dish-cost {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#wrapper-content .quantity {
+    display: flex;
+    position: absolute;
+    top: 55px;
+    left: 160px; 
+    font-size: 20px; 
+    cursor: pointer;
+}
+
+#wrapper-content .quantity i {
+    margin-right: 30px;
+}
+
+#wrapper-content .quantity > p {
+    margin-right: 10px;
+    font-size: 16px;
+    position: absolute;
+    left: 27px;
+    bottom: 0px;
+}
+
+#wrapper-content .remove {
+    position: absolute;
+    top: 62px;
+    right: 0;
+    color: gray;
+    cursor: pointer;
+}
+
+#wrapper-content #checkout {
+    min-width: 400px;
+    max-height: 300px;
+    margin-left: 60px;
+    position: relative;
+}
+
+#wrapper-content #checkout .title {
+    color: black;
+    font-size: 30px;
+    font-weight: 800px;
+    margin-bottom: 35px;
+}
+#wrapper-content .taxes,
+#wrapper-content .price {
+    min-width: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#wrapper-content .price .number {
+    float: right;
+}
+
+#wrapper-content .taxes .number {
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+#wrapper-content .Subtotal {
+    min-width: 300px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px solid rgb(183, 183, 183);
+}
+
+#wrapper-content .checkout {
+    display: block;
+    min-width: 300px;
+    min-height: 60px;
+    text-align: center;
+    line-height: 60px;
+    background-color: green;
+    border-radius: 4px;
+    margin-top: 10px;
+    color: #fff;
+    transition: 0.25s ease;
+    cursor: pointer;
+}
+
+#wrapper-content .checkout:hover {
+    background-color: rgb(0, 164, 0);
+}

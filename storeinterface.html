@@ -26,9 +26,12 @@
             <img src="/img/logoVKUFood.png" alt="">
         </div>
         <div class="header-right">
-          <div class = "item-cart js-select-cart">
+          <div class = "item-cart js-select-cart" onclick="roadtocard()">
             <div class = "contain-item">
                 <i class = "ti-shopping-cart" ></i>
+            </div>
+            <div id="count-quantity" class="quantity-hidden">
+              
             </div>
           </div>
           <div class = "item-login-out" onclick="openLogin()" >
@@ -137,8 +140,8 @@
                 <div class="col-7 infoItem">
                     <div class="nameFood">Cơm đậu khuôn độn thịt</div>
                     <div class="price-box">
-                      <div class="price"><span>25.000</span></div>
-                      <div class="add-icon"><i class="fa-solid fa-plus" style="color: #fff;"></i></div>
+                      <div class="price"><span>25000</span></div>
+                      <div class="add-icon" onclick="addproduct(1, 'Cơm đậu khuôn độn thịt', 25000, '/img/chi-trang-chia-se-cach-lam-dau-hu-nhoi-thit-mon-don-gian-va-de-an-202209091444581966.jpg')"><i class="fa-solid fa-plus" style="color: #fff;"></i></div>
                     </div>                     
                     
                 </div>
@@ -597,29 +600,7 @@
     sBtn=language.querySelector('.sBtn'),
     readmoreBtn=document.querySelector('.readmore');
     hidden_content=document.querySelector('.content-hidden')
-
-    var sliderItems = document.querySelectorAll('.content-background');
-    var currentSlide = 0;
-    var imagePaths = [
-        '/img/slider1.jpg',
-        '/img/slider2.jpg',
-        '/img/slider3.jpg'
-    ];
-
-    function changeSlide() {
-        sliderItems.forEach(function(item) {
-            item.style.backgroundImage = "url('" + imagePaths[currentSlide] + "')";
-        });
-
-        currentSlide++;
-        if (currentSlide >= imagePaths.length) {
-            currentSlide = 0;
-        }
-    }
-
-    setInterval(changeSlide, 3000);
         
-
     function showLanguageSelect() {
         sublanguage.classList.add('open')
         // item_language.classList.add('arrow-down')
@@ -628,13 +609,13 @@
     function updateshowLanguageSelect() {
         btnlanguage.addEventListener('click', showLanguageSelect)
     }
-    readmoreBtn.addEventListener('click',()=>{
+    // readmoreBtn.addEventListener('click',()=>{
         
-        readmoreBtn.classList.add('d-none');
-        hidden_content.classList.add('d-block');
+    //     readmoreBtn.classList.add('d-none');
+    //     hidden_content.classList.add('d-block');
 
         
-    })
+    // })
     elementOfLang.forEach( lgue=>{
         lgue.addEventListener('click',()=>{
             let textLang=lgue.innerText;
@@ -655,38 +636,58 @@
         }
     }
 
-    function headerChangeBackground () {
-        const scrolltop = window.pageYOffset
-        if (scrolltop > 0) {
-            leave.classList.add('ontop')
-        }else {
-            leave.classList.remove('ontop')
-        }
+    function closeCart () {
+        arrayCart.forEach(element => {
+          element.classList.remove('open')
+        }) 
     }
 
+    function openCart () {
+        arrayCart.forEach(element => {
+            element.classList.add('open')
+        })
+    }
 
-        function closeCart () {
-            arrayCart.forEach(element => {
-            element.classList.remove('open')
-            }) 
-        }
-
-        function openCart () {
-            arrayCart.forEach(element => {
-                element.classList.add('open')
-            })
-        }
-
-        function openLogin() {
+    function openLogin() {
         window.location.href = "/login.html"
+    }
+
+    var arr = [];
+
+    function addproduct(id, tensp, gia, urlimg) {
+      var check = false;
+      var count = document.getElementById('count-quantity')
+      for(i = 0; i < arr.length; i++) {
+        var sp = arr[i];
+        if (sp[0]===id) {
+          sp[4]++;
+          check = true;
         }
+      }
+      if(check === false) {
+        arr.push ( [id, tensp, gia, urlimg, 1]);
+      }
+      if(arr.length===0) {
+        count.classList.toggle('quantity-hidden')
+      }else {
+        count.classList.remove('quantity-hidden')
+      }
+
+      document.getElementById('count-quantity').innerText=arr.length;
+      console.log(arr);
+      localStorage.setItem('cart', JSON.stringify(arr));
+    }
+
+    function roadtocard() {
+      window.location.href = "cart.html"
+    }
 
         emptyCart.addEventListener('click', closeCart)
         cart.addEventListener('click', openCart)
         btnlanguage.addEventListener('click', updateshowLanguageSelect)
         btnlanguage.addEventListener('click', showLanguageSelect)
         document.addEventListener('click', unshowLanguageSelect)
-        window.addEventListener('scroll', headerChangeBackground)
+        // window.addEventListener('scroll', headerChangeBackground)
 
     // language.addEventListener('click', showLanguageSelect)
     // document.addEventListener('click', unshowLanguageSelect)
