@@ -217,6 +217,7 @@
 #content {
     width: 100%;
     min-height: 1000px;
+    margin-bottom: 50px;
 }
 
 #content .content-background {

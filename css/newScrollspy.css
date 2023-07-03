@@ -18,7 +18,7 @@ html{
     display: block;
     background-color: rgb(255, 255, 255);
     width: 100%;
-    
+
     
 }
 
@@ -26,6 +26,7 @@ html{
 
     padding: 10px;
     text-decoration: none;
+    cursor: pointer;
   
 }
 .header nav a:hover{
@@ -42,6 +43,7 @@ html{
 }
 .section h4{
    /* margin-bottom: 100px; */
+   padding: 10px;
 }
 .header nav a.active{
 

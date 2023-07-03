@@ -202,12 +202,8 @@
 }
 
 #content {
-<<<<<<< HEAD
     width: 100%;
     max-width: calc(100% - 175px);
-=======
-    width: 80%;
->>>>>>> 8445646f080c7e0167e34124c8c4fa9d5bf7d6f4
     z-index: 0;
     position: relative;
     margin-top: 32px;
@@ -215,6 +211,7 @@
     margin-right: auto;
     max-width: calc(100% - 175px);
     min-height: 0;
+    margin-bottom: 30px;
 
 }
 
@@ -293,15 +290,11 @@
 
 #content .discount-2 p,
 #content .discount-1 p {
-    position: absolute;
-    left: 28px;
-    bottom: -16px;
+    
 }
 
 #content .discount-2 .sub-discount {
-    position: absolute;
-    left: 200px;
-    bottom: 0px;
+    margin-left: 10px;
     font-weight: 500;
     color: #00a5cf;
 }
