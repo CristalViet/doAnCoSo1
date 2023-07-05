@@ -158,7 +158,7 @@
                     <div class="nameFood">Cơm tấm sà bì chưởng</div>
                     <div class="price-box">
                       <div class="price"><span>25.000</span></div>
-                      <div class="add-icon"><i class="fa-solid fa-plus" style="color: #fff;"></i></div>
+                      <div class="add-icon" onclick = "addproduct(2, 'Cơm xà bì chưởng', 25000, '/img/store-img/order-dish/comtam.jpg')"><i class="fa-solid fa-plus" style="color: #fff;"></i></div>
                     </div>                     
                     
                 </div>
@@ -542,17 +542,17 @@
         }
     }
 
-    function closeCart () {
-        arrayCart.forEach(element => {
-          element.classList.remove('open')
-        }) 
-    }
+    // function closeCart () {
+    //     arrayCart.forEach(element => {
+    //       element.classList.remove('open')
+    //     }) 
+    // }
 
-    function openCart () {
-        arrayCart.forEach(element => {
-            element.classList.add('open')
-        })
-    }
+    // function openCart () {
+    //     arrayCart.forEach(element => {
+    //         element.classList.add('open')
+    //     })
+    // }
 
     function openLogin() {
         window.location.href = "/login.html"
