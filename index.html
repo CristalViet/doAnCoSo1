@@ -20,35 +20,43 @@
 
 </head>
 <body>
-    <div id="header">
-        <div class="logo">
-            <img src="/img/logoVKUFood.png" alt="">
-        </div>
-        <div class = "item-cart js-select-cart">
-            <div class = "contain-item">
-                <i class = "ti-shopping-cart" ></i>
+    
+        <div id="header">
+            <div class="contain-header">
+
+                <div class="logo">
+                    <img src="/img/logoVKUFood.png" alt="">
+                </div>
+                <div class = "item-cart js-select-cart">
+                    <div class = "contain-item">
+                        <i class = "ti-shopping-cart" ></i>
+                    </div>
+                </div>
+                <div class = "item-login-out" onclick="openLogin()">
+                    <p>Đăng Nhập/Đăng kí</p>
+                </div>
+                
+                <div class = "item-language">
+                    <button class = "a-item-language js-select-language"><span class = "sBtn">vi</span>
+                        <ul class = "sub-language">
+                            <li class = "lg-tv lg">
+                                Tiếng Việt
+                            </li>
+                            <li class = "lg-ta lg">
+                                English
+                            </li>
+                        </ul>
+                        <i class = "ti-angle-down"></i>
+                    </button>
+                    
+                    
+                </div>
+
             </div>
-        </div>
-        <div class = "item-login-out" onclick="openLogin()">
-            <p>Đăng Nhập/Đăng kí</p>
-        </div>
-        
-        <div class = "item-language">
-            <button class = "a-item-language js-select-language"><span class = "sBtn">vi</span>
-                <ul class = "sub-language">
-                    <li class = "lg-tv lg">
-                        Tiếng Việt
-                    </li>
-                    <li class = "lg-ta lg">
-                        English
-                    </li>
-                </ul>
-                <i class = "ti-angle-down"></i>
-            </button>
-            
             
         </div>
-    </div>
+    
+    
     <div class="container-cart">
         <div class="container-cart empty js-close-cart">
                 
@@ -100,340 +108,344 @@
             </div>
         </div>
     </div>
+    
     <div id="content">
         <div class="content-background">
         </div>
-        <div class="content-empty">
-            <div class="content-emmty-invite">
-                <h3 class="invite-goodmorning">
-                    Good Morning
-                </h3>
-                <h2 class="sub-invite">
-                    Where should we deliver your food today?
-                </h2>
-                <input type="text" class = "invite-input-address" placeholder="Nhập địa chỉ của bạn">
-                <button class = "invite-find">Tìm kiếm</button>
+        <div class="s">
+            <div class="content-empty">
+                <div class="content-emmty-invite">
+                    <h3 class="invite-goodmorning">
+                        Good Morning
+                    </h3>
+                    <h2 class="sub-invite">
+                        Where should we deliver your food today?
+                    </h2>
+                    <input type="text" class = "invite-input-address" placeholder="Nhập địa chỉ của bạn">
+                    <button class = "invite-find">Tìm kiếm</button>
+                </div>
             </div>
-        </div>
-        <div class="store-recomend">
-            <span>Ưu đãi xung quanh trường</span>
-            <span class = "v">V</span>
-            <span class = "k">K</span>
-            <span class = "u">U</span>
-        </div>
-        <ul class="content-store responsive" >
-            <li class="store">
-                <div class="store-sub">
-                    <div class="store-img">
-                        <img src="/img/store-img/store-1.png" alt="">
-                    </div>
-                    <div class="store-info">
-                        <a href="/storeinterface.html"><p class="store-name">
-                            Quán cô Thắm
-                        </p></a>
-                        
-                        <p class="store-mainproduct">
-                            Cơm
-                        </p>
-                        <div class="store-status">
-                            <i class="fa-solid fa-star"></i>
-                            <p class="store-point">4.6</p>
-                            <i class="fa-thin fa-clock"></i>
-                            <p class="status">Đang mở cửa</p>
-                            <i class="fa-sharp fa-solid fa-circle"></i>
+            <div class="store-recomend">
+                <span>Ưu đãi xung quanh trường</span>
+                <span class = "v">V</span>
+                <span class = "k">K</span>
+                <span class = "u">U</span>
+            </div>
+            <ul class="content-store responsive" >
+                <li class="store col-3 ">
+                    <div class="store-sub">
+                        <div class="store-img quan_an">
+                            <img src="/img/store-img/store-1.png" alt="">
                         </div>
-                        <div class="cost-ship-product">
-                            <img src="/img/icon/icon-promo-tag.svg" alt="">
-                            <p class="free">Free ship</p>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="store" >
-                <div class="store-sub">
-                    <div class="store-img">
-                        <img src="/img/store-img/store-2.png" alt="">
-                    </div>
-                    <div class="store-info">
-                        <p class="store-name">
-                            Quán cô Đào
-                        </p>
-                        <p class="store-mainproduct">
-                            Cơm
-                        </p>
-                        <div class="store-status">
-                            <i class="fa-solid fa-star"></i>
-                            <p class="store-point">4.6</p>
-                            <i class="fa-thin fa-clock"></i>
-                            <p class="status">Đang mở cửa</p>
-                            <i class="fa-sharp fa-solid fa-circle"></i>
-                        </div>
-                        <div class="cost-ship-product">
-                            <img src="/img/icon/icon-promo-tag.svg" alt="">
-                            <p class="free">Free ship</p>
+                        <div class="store-info">
+                            <a href="/storeinterface.html"><p class="store-name">
+                                Quán cô Thắm
+                            </p></a>
+                            
+                            <p class="store-mainproduct">
+                                Cơm
+                            </p>
+                            <div class="store-status">
+                                <i class="fa-solid fa-star"></i>
+                                <p class="store-point">4.6</p>
+                                <i class="fa-thin fa-clock"></i>
+                                <p class="status">Đang mở cửa</p>
+                                <i class="fa-sharp fa-solid fa-circle"></i>
+                            </div>
+                            <div class="cost-ship-product">
+                                <img src="/img/icon/icon-promo-tag.svg" alt="">
+                                <p class="free">Free ship</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </li>
-           
-            <li class="store">
-                <div class="store-sub">
-                    <div class="store-img">
-                        <img src="/img/store-img/store-3.png" alt="">
-                    </div>
-                    <div class="store-info">
-                        <p class="store-name">
-                            Quán cô Mai
-                        </p>
-                        <p class="store-mainproduct">
-                            Cơm
-                        </p>
-                        <div class="store-status">
-                            <i class="fa-solid fa-star"></i>
-                            <p class="store-point">4.6</p>
-                            <i class="fa-thin fa-clock"></i>
-                            <p class="status">Đang mở cửa</p>
-                            <i class="fa-sharp fa-solid fa-circle"></i>
+                </li>
+                <li class="store col-3 " >
+                    <div class="store-sub">
+                        <div class="store-img quan_an">
+                            <img src="/img/store-img/store-2.png" alt="">
                         </div>
-                        <div class="cost-ship-product">
-                            <img src="/img/icon/icon-promo-tag.svg" alt="">
-                            <p class="free">Free ship</p>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="store">
-                <div class="store-sub">
-                    <div class="store-img">
-                        <img src="/img/store-img/store-4.png" alt="">
-                    </div>
-                    <div class="store-info">
-                        <p class="store-name">
-                            Quán cô Trúc
-                        </p>
-                        <p class="store-mainproduct">
-                            Cơm
-                        </p>
-                        <div class="store-status">
-                            <i class="fa-solid fa-star"></i>
-                            <p class="store-point">4.6</p>
-                            <i class="fa-thin fa-clock"></i>
-                            <p class="status">Đang mở cửa</p>
-                            <i class="fa-sharp fa-solid fa-circle"></i>
-                        </div>
-                        <div class="cost-ship-product">
-                            <img src="/img/icon/icon-promo-tag.svg" alt="">
-                            <p class="free">Free ship</p>
+                        <div class="store-info">
+                            <p class="store-name">
+                                Quán cô Đào
+                            </p>
+                            <p class="store-mainproduct">
+                                Cơm
+                            </p>
+                            <div class="store-status">
+                                <i class="fa-solid fa-star"></i>
+                                <p class="store-point">4.6</p>
+                                <i class="fa-thin fa-clock"></i>
+                                <p class="status">Đang mở cửa</p>
+                                <i class="fa-sharp fa-solid fa-circle"></i>
+                            </div>
+                            <div class="cost-ship-product">
+                                <img src="/img/icon/icon-promo-tag.svg" alt="">
+                                <p class="free">Free ship</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </li>
-        </ul>
-        <div class = "store-see-all">
-            <p class="see-all">
-                See all store
-            </p>
-        </div>
-        <div class="food-type">
-            <span>
-                There's something for everyone!
-            </span>
-        </div>
-        <ul class="content-store">
-            <li class="store">
-                <div class="store-sub">
-                    <div class="store-img">
-                        <img src="/img/store-img/dish-img/banhmi.jpg" alt="">
+                </li>
+               
+                <li class="store col-3">
+                    <div class="store-sub">
+                        <div class="store-img quan_an">
+                            <img src="/img/store-img/store-3.png" alt="">
+                        </div>
+                        <div class="store-info">
+                            <p class="store-name">
+                                Quán cô Mai
+                            </p>
+                            <p class="store-mainproduct">
+                                Cơm
+                            </p>
+                            <div class="store-status">
+                                <i class="fa-solid fa-star"></i>
+                                <p class="store-point">4.6</p>
+                                <i class="fa-thin fa-clock"></i>
+                                <p class="status">Đang mở cửa</p>
+                                <i class="fa-sharp fa-solid fa-circle"></i>
+                            </div>
+                            <div class="cost-ship-product">
+                                <img src="/img/icon/icon-promo-tag.svg" alt="">
+                                <p class="free">Free ship</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="store-info">
-                        <p class="store-name">
-                            Bánh mì
-                        </p>
+                </li>
+                <li class="store col-3">
+                    <div class="store-sub">
+                        <div class="store-img quan_an">
+                            <img src="/img/store-img/store-4.png" alt="">
+                        </div>
+                        <div class="store-info">
+                            <p class="store-name">
+                                Quán cô Trúc
+                            </p>
+                            <p class="store-mainproduct">
+                                Cơm
+                            </p>
+                            <div class="store-status">
+                                <i class="fa-solid fa-star"></i>
+                                <p class="store-point">4.6</p>
+                                <i class="fa-thin fa-clock"></i>
+                                <p class="status">Đang mở cửa</p>
+                                <i class="fa-sharp fa-solid fa-circle"></i>
+                            </div>
+                            <div class="cost-ship-product">
+                                <img src="/img/icon/icon-promo-tag.svg" alt="">
+                                <p class="free">Free ship</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="store">
-                <div class="store-sub">
-                    <div class="store-img">
-                        <img src="/img/store-img/dish-img/chao.jpg" alt="">
+                </li>
+            </ul>
+            <div class = "store-see-all">
+                <p class="see-all">
+                    See all store
+                </p>
+            </div>
+            <div class="food-type">
+                <span>
+                    There's something for everyone!
+                </span>
+            </div>
+            <ul class="content-store">
+                <li class="store col-sm-4 col-lg-3 col-6">
+                    <div class="store-sub">
+                        <div class="store-img img-category">
+                            <img src="/img/store-img/dish-img/banhmi.jpg" alt="">
+                        </div>
+                        <div class="store-info">
+                            <p class="store-name">
+                                Bánh mì
+                            </p>
+                        </div>
                     </div>
-                    <div class="store-info">
-                        <p class="store-name">
-                            Cháo
-                        </p>
+                </li>
+                <li class="store col-sm-4 col-lg-3 col-6">
+                    <div class="store-sub">
+                        <div class="store-img img-category">
+                            <img src="/img/store-img/dish-img/chao.jpg" alt="">
+                        </div>
+                        <div class="store-info">
+                            <p class="store-name">
+                                Cháo
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="store">
-                <div class="store-sub">
-                    <div class="store-img">
-                        <img src="/img/store-img/dish-img/com-tam.png" alt="">
+                </li>
+                <li class="store col-sm-4 col-lg-3 col-6">
+                    <div class="store-sub">
+                        <div class="store-img img-category">
+                            <img src="/img/store-img/dish-img/com-tam.png" alt="">
+                        </div>
+                        <div class="store-info">
+                            <p class="store-name">
+                                Cơm tấm
+                            </p>
+                        </div>
                     </div>
-                    <div class="store-info">
-                        <p class="store-name">
-                            Cơm tấm
-                        </p>
+                </li>
+                <li class="store col-sm-4 col-lg-3 col-6">
+                    <div class="store-sub">
+                        <div class="store-img img-category">
+                            <img src="/img/store-img/dish-img/com.png" alt="">
+                        </div>
+                        <div class="store-info">
+                            <p class="store-name">
+                                Cơm
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="store">
-                <div class="store-sub">
-                    <div class="store-img">
-                        <img src="/img/store-img/dish-img/com.png" alt="">
+                </li>
+                <li class="store col-sm-4 col-lg-3 col-6">
+                    <div class="store-sub">
+                        <div class="store-img img-category">
+                            <img src="/img/store-img/dish-img/do-uong-lanh.png" alt="">
+                        </div>
+                        <div class="store-info">
+                            <p class="store-name">
+                                Đồ uống lạnh
+                            </p>
+                        </div>
                     </div>
-                    <div class="store-info">
-                        <p class="store-name">
-                            Cơm
-                        </p>
+                </li>
+                <li class="store col-sm-4 col-lg-3 col-6">
+                    <div class="store-sub">
+                        <div class="store-img img-category">
+                            <img src="/img/store-img/dish-img/ga.png" alt="">
+                        </div>
+                        <div class="store-info">
+                            <p class="store-name">
+                                Gà
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="store">
-                <div class="store-sub">
-                    <div class="store-img">
-                        <img src="/img/store-img/dish-img/do-uong-lanh.png" alt="">
+                </li>
+                <li class="store col-sm-4 col-lg-3 col-6">
+                    <div class="store-sub">
+                        <div class="store-img img-category">
+                            <img src="/img/store-img/dish-img/hamberger.jpg" alt="">
+                        </div>
+                        <div class="store-info">
+                            <p class="store-name">
+                                Hamburger
+                            </p>
+                        </div>
                     </div>
-                    <div class="store-info">
-                        <p class="store-name">
-                            Đồ uống lạnh
-                        </p>
+                </li>
+                <li class="store col-sm-4 col-lg-3 col-6">
+                    <div class="store-sub">
+                        <div class="store-img img-category">
+                            <img src="/img/store-img/dish-img/hutieu.jpg" alt="">
+                        </div>
+                        <div class="store-info">
+                            <p class="store-name">
+                                Hủ tiếu
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="store">
-                <div class="store-sub">
-                    <div class="store-img">
-                        <img src="/img/store-img/dish-img/ga.png" alt="">
+                </li>
+                <li class="store col-sm-4 col-lg-3 col-6">
+                    <div class="store-sub">
+                        <div class="store-img img-category">
+                            <img src="/img/store-img/dish-img/mi-y.png" alt="">
+                        </div>
+                        <div class="store-info">
+                            <p class="store-name">
+                                Mỳ ý
+                            </p>
+                        </div>
                     </div>
-                    <div class="store-info">
-                        <p class="store-name">
-                            Gà
-                        </p>
+                </li>
+                <li class="store col-sm-4 col-lg-3 col-6">
+                    <div class="store-sub">
+                        <div class="store-img img-category">
+                            <img src="/img/store-img/dish-img/ga-ran.png" alt="">
+                        </div>
+                        <div class="store-info">
+                            <p class="store-name">
+                                Gà rán
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="store">
-                <div class="store-sub">
-                    <div class="store-img">
-                        <img src="/img/store-img/dish-img/hamberger.jpg" alt="">
+                </li>
+                <li class="store col-sm-4 col-lg-3 col-6">
+                    <div class="store-sub">
+                        <div class="store-img img-category">
+                            <img src="/img/store-img/dish-img/pizza.png" alt="">
+                        </div>
+                        <div class="store-info">
+                            <p class="store-name">
+                                Pizza
+                            </p>
+                        </div>
                     </div>
-                    <div class="store-info">
-                        <p class="store-name">
-                            Hamburger
-                        </p>
+                </li>
+                <li class="store col-sm-4 col-lg-3 col-6">
+                    <div class="store-sub">
+                        <div class="store-img img-category">
+                            <img src="/img/store-img/dish-img/banh-bao.png" alt="">
+                        </div>
+                        <div class="store-info">
+                            <p class="store-name">
+                                Bánh bao
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="store">
-                <div class="store-sub">
-                    <div class="store-img">
-                        <img src="/img/store-img/dish-img/hutieu.jpg" alt="">
+                </li>
+                <li class="store col-sm-4 col-lg-3 col-6">
+                    <div class="store-sub">
+                        <div class="store-img img-category">
+                            <img src="/img/store-img/dish-img/tra-sua.png" alt="">
+                        </div>
+                        <div class="store-info">
+                            <p class="store-name">
+                                Trà sữa
+                            </p>
+                        </div>
                     </div>
-                    <div class="store-info">
-                        <p class="store-name">
-                            Hủ tiếu
-                        </p>
-                    </div>
-                </div>
-            </li>
-            <li class="store">
-                <div class="store-sub">
-                    <div class="store-img">
-                        <img src="/img/store-img/dish-img/mi-y.png" alt="">
-                    </div>
-                    <div class="store-info">
-                        <p class="store-name">
-                            Mỳ ý
-                        </p>
-                    </div>
-                </div>
-            </li>
-            <li class="store">
-                <div class="store-sub">
-                    <div class="store-img">
-                        <img src="/img/store-img/dish-img/ga-ran.png" alt="">
-                    </div>
-                    <div class="store-info">
-                        <p class="store-name">
-                            Gà rán
-                        </p>
-                    </div>
-                </div>
-            </li>
-            <li class="store">
-                <div class="store-sub">
-                    <div class="store-img">
-                        <img src="/img/store-img/dish-img/pizza.png" alt="">
-                    </div>
-                    <div class="store-info">
-                        <p class="store-name">
-                            Pizza
-                        </p>
-                    </div>
-                </div>
-            </li>
-            <li class="store">
-                <div class="store-sub">
-                    <div class="store-img">
-                        <img src="/img/store-img/dish-img/banh-bao.png" alt="">
-                    </div>
-                    <div class="store-info">
-                        <p class="store-name">
-                            Bánh bao
-                        </p>
-                    </div>
-                </div>
-            </li>
-            <li class="store">
-                <div class="store-sub">
-                    <div class="store-img">
-                        <img src="/img/store-img/dish-img/tra-sua.png" alt="">
-                    </div>
-                    <div class="store-info">
-                        <p class="store-name">
-                            Trà sữa
-                        </p>
-                    </div>
-                </div>
-            </li>
-        </ul>
-
-    </div>
+                </li>
+            </ul>
     
        
-
-    <div id="content" >
-        <div class="content-background">
-        </div>
         
-        <div class="content-text mx-auto">
+           
+    
+        
+            <div class="content-background">
+            </div>
+            
+            <div class="content-text mx-auto">
+                <div class="diviver"></div>
+                <h2>Vì sao bạn nên Order trên VKUFood?</h2>
+            <ul style="padding-left: 0; margin-left: 24px; ">
+                <li class="list_style"><span>Nhanh nhất</span> - VKUFood cung cấp dịch vụ giao đồ ăn nhanh nhất.</li>
+                <li class="list_style"><span>Dễ dàng nhất</span> - Giờ đây, bạn chỉ cần thực hiện vài cú nhấp chuột hoặc chạm nhẹ là đã có thể đặt đồ ăn. Hãy đặt đồ ăn trực tuyến hoặc tải xuống siêu ứng dụng Grab của chúng tôi để có trải nghiệm nhanh hơn và thú vị hơn.</li>
+                <li class="list_style"><span>Đáp ứng mọi nhu cầu</span>  - Giờ đây, bạn chỉ cần thực hiện vài cú nhấp chuột hoặc chạm nhẹ là đã có thể đặt đồ ăn. Hãy đặt đồ ăn trực tuyến hoặc tải xuống siêu ứng dụng Grab của chúng tôi để có trải nghiệm nhanh hơn và thú vị hơn.</li>
+                <li class="list_style"><span>Thanh toán dễ dàng</span> - Giao và nhận đồ ăn thật dễ dàng. Thanh toán bằng Internet Banking hoặc tiền mặt khi nhận hàng.</li>
+                <li class="list_style"><span>Nhiều quà tặng hơn</span> - Tích điểm VKUFood cho mỗi đơn hàng của bạn và sử dụng điểm thưởng để đổi lấy nhiều ưu đãi hơn.</li>
+            </ul>
+            <h2>Những câu hỏi thường gặp</h2>
             <div class="diviver"></div>
-            <h2>Vì sao bạn nên Order trên VKUFood?</h2>
-        <ul style="padding-left: 0; margin-left: 24px; ">
-            <li class="list_style"><span>Nhanh nhất</span> - VKUFood cung cấp dịch vụ giao đồ ăn nhanh nhất.</li>
-            <li class="list_style"><span>Dễ dàng nhất</span> - Giờ đây, bạn chỉ cần thực hiện vài cú nhấp chuột hoặc chạm nhẹ là đã có thể đặt đồ ăn. Hãy đặt đồ ăn trực tuyến hoặc tải xuống siêu ứng dụng Grab của chúng tôi để có trải nghiệm nhanh hơn và thú vị hơn.</li>
-            <li class="list_style"><span>Đáp ứng mọi nhu cầu</span>  - Giờ đây, bạn chỉ cần thực hiện vài cú nhấp chuột hoặc chạm nhẹ là đã có thể đặt đồ ăn. Hãy đặt đồ ăn trực tuyến hoặc tải xuống siêu ứng dụng Grab của chúng tôi để có trải nghiệm nhanh hơn và thú vị hơn.</li>
-            <li class="list_style"><span>Thanh toán dễ dàng</span> - Giao và nhận đồ ăn thật dễ dàng. Thanh toán bằng Internet Banking hoặc tiền mặt khi nhận hàng.</li>
-            <li class="list_style"><span>Nhiều quà tặng hơn</span> - Tích điểm VKUFood cho mỗi đơn hàng của bạn và sử dụng điểm thưởng để đổi lấy nhiều ưu đãi hơn.</li>
-        </ul>
-        <h2>Những câu hỏi thường gặp</h2>
-        <div class="diviver"></div>
-        <h4>VKUFood là gì?</h4>
-        
-        <p>VKUFood là một website đặt đồ ăn online dành cho sinh viên trường học. Nó giống như GrabFood nhưng được thiết kế riêng cho sinh viên trường học. Với VKUFood, bạn có thể đặt đồ ăn nhanh chóng và tiện lợi ngay tại trường 
-            học của mình. Hãy truy cập VKUFood để biết thêm chi tiết và đặt đồ ăn ngon ngay hôm nay!</p>
-            <div class="readmore"><span>Read More</span></div>
-            <div class="content-hidden">
-                <div class="diviver"></div>
-                <h3>Những quán ăn nào được liệt kê trong VKUFood?</h3>
-                <p>Tất cả các quán ăn xung quanh trường VKU và Làng ĐH Đà Nẵng trong bán kính 4km</p>
-                <h3>Tôi có thể thanh toán trực tuyến trên VKUFood cho đơn hàng của mình không?</h3>
-                <p>VKUFood chấp nhận nhiều hình thức thanh toán cho các đơn đặt đồ ăn trực tuyến, bao gồm cả thanh toán trực tuyến tại Việt Nam bằng thẻ tín dụng, thẻ ghi nợ, PayPal hoặc trả tiền lúc nhận hàng.</p>
-                <h3>VKUFood tính phí giao đồ ăn như thế nào?</h3>
-                <p>Chi phí sẽ phụ thuộc vào khoảng cách từ quán ăn đến vị trị bạn nhận đồ ăn.</p>
-                <div class="diviver"></div>
+            <h4>VKUFood là gì?</h4>
+            
+            <p>VKUFood là một website đặt đồ ăn online dành cho sinh viên trường học. Nó giống như GrabFood nhưng được thiết kế riêng cho sinh viên trường học. Với VKUFood, bạn có thể đặt đồ ăn nhanh chóng và tiện lợi ngay tại trường 
+                học của mình. Hãy truy cập VKUFood để biết thêm chi tiết và đặt đồ ăn ngon ngay hôm nay!</p>
+                <div class="readmore"><span>Read More</span></div>
+                <div class="content-hidden">
+                    <div class="diviver"></div>
+                    <h3>Những quán ăn nào được liệt kê trong VKUFood?</h3>
+                    <p>Tất cả các quán ăn xung quanh trường VKU và Làng ĐH Đà Nẵng trong bán kính 4km</p>
+                    <h3>Tôi có thể thanh toán trực tuyến trên VKUFood cho đơn hàng của mình không?</h3>
+                    <p>VKUFood chấp nhận nhiều hình thức thanh toán cho các đơn đặt đồ ăn trực tuyến, bao gồm cả thanh toán trực tuyến tại Việt Nam bằng thẻ tín dụng, thẻ ghi nợ, PayPal hoặc trả tiền lúc nhận hàng.</p>
+                    <h3>VKUFood tính phí giao đồ ăn như thế nào?</h3>
+                    <p>Chi phí sẽ phụ thuộc vào khoảng cách từ quán ăn đến vị trị bạn nhận đồ ăn.</p>
+                    <div class="diviver"></div>
+                </div>
             </div>
         </div>
+        
        
       
 
@@ -497,7 +509,8 @@
     const item_language=document.querySelector('.item-language')
     const language = document.querySelector('.js-select-language')
     
-    const leave = document.getElementById("header"),
+    const leave = document.getElementById("header")
+    const leave2 = document.querySelector(".contain-header"), 
     elementOfLang=sublanguage.querySelectorAll('.lg'),
     sBtn=language.querySelector('.sBtn'),
     readmoreBtn=document.querySelector('.readmore');
@@ -602,8 +615,10 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js" integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <script type="text/javascript">
     $('.responsive').slick({
   dots: true,
@@ -615,21 +630,16 @@
     {
       breakpoint: 1024,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
         slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToScroll: 2,
+        infinite: true,
+        dots: true,
+        arrows:false
       }
     },
+    
     {
-      breakpoint: 480,
+      breakpoint: 850,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1
@@ -641,4 +651,5 @@
   ]
 });
 </script>
+
 </html>

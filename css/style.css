@@ -5,6 +5,16 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.contain-header{
+    height: 88px;
+    width: 80%;
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    margin-left: 170px;
+    align-items: center;
+
+}
 #header {
     height: 88px;
     padding: 0 40px;
@@ -17,6 +27,8 @@
     left: 0;
     z-index: 1;
     transition: 0.25s ease-in-out;
+    width: 100%;
+    margin: auto;
 }
 .store-info a{
     text-decoration: none;
@@ -28,7 +40,7 @@
 
 #header .logo {
     float: left;
-    margin-left: 124px;
+    /* margin-left: 124px; */
     cursor: pointer;
 }
 
@@ -372,7 +384,10 @@
 
 #content {
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     min-height: 1000px;
+    margin-bottom: 30px;
 }
 
 #content .content-background {
@@ -393,6 +408,9 @@
     margin-bottom: 100px;
 }
 
+#content .div_contain_content{
+    width: 80%;
+}
 #content .content-emmty-invite {
     display: block;
     position: absolute;
@@ -518,11 +536,19 @@
 #content ul.content-store li img {
     border-radius: 4px;
 }
-
+#content ul.content-store li .quan_an img{
+    width: 100%;
+    height: auto;
+}
 #content ul.content-store li img {
     max-width: 100%;
     height: auto;
 }
+#content ul.content-store li .img-category img {
+    max-width: 250px;
+    height: 150px;
+}
+
 
 #content .store-info .store-name {
     font-size: 1.2rem;
@@ -688,5 +714,82 @@
 .content-footer .NameBrand img{
     width: 180px;
     height: 75px;
+
+}
+@media(max-width:1200px){
+    #content ul.content-store li .img-category img{
+        max-width: 200px;
+        height: 100px;
+    }
+    /* #content ul.content-store{
+        margin-left: auto;
+        margin-right: auto;
+    } */
+}@media(max-width:989px){
+    .store-recomend{
+        font-size: 10px;
+    }
+    .food-type{
+        text-align: center;
+    }
+    #content .content-emmty-invite{
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translate(-50%,-75%);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #content .store-see-all{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #content ul.content-store{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
+@media(max-width:720px){
+    
+    .item-language{
+        display: none !important;
+    }
+    #header{
+        justify-content: space-evenly;
+    }
+    #header .logo{
+        margin-left: 0px;
+    }
+    /* #content{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    } */
+    .contain-header{
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+        width: 100%;
+    }
+    #content .food-type,
+    .store-recomend{
+        margin-left: auto !important;
+        margin-right: auto !important;
+        font-size: 1.6rem !important;
+    }
+    .store-recomend span{
+        font-size: 1.6rem !important;
+    }
+    .item-login-out{
+        font-size: 6;
+        width: 100px;
+        display: none;
+    }
+    .item-cart{
+        display: none;
+    }
+}
+@media(max-width:450px){
 
 }

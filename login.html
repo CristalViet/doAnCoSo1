@@ -25,14 +25,14 @@
                 <div><span>New user?</span><a href="/register.html">Create an account?</a></div>
                 
                 <p style="font-weight: bold;">Email</p>
-                <div><input type="email" name="" id="" placeholder="Hãy nhập email của bạn" class="emailform"></div> 
+                <div><input type="email" name="" id="email" placeholder="Hãy nhập email của bạn" class="emailform"></div> 
                 <p style="font-weight: bold;">Password</p>
-                <div> <input type="password" name="" id="" placeholder="******" class = "passwordform"></div>
+                <div> <input type="password" name="password" id="password" placeholder="******" class = "passwordform"></div>
                 <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
                     <label class="form-check-label" for="flexSwitchCheckDefault">Stay signed in!</label>
                   </div>
-                <div class="loginBtn" onclick="loginSuccess()">Login</div>
+                <div class="loginBtn" onclick="loginCheck()">Login</div>
                 <div class="row" style="align-items: center;">
                     <div class="divider col-5"></div>
                     <div class="col-2">OR</div>
@@ -43,7 +43,7 @@
                     <div class="col-2 logo-social"><i class="fa-brands fa-facebook"></i></div>
                     <div class="col-2 logo-social"><i class="fa-brands fa-google"></i></div>
                     <div class="col-2 logo-social"><i class="fa-brands fa-twitter"></i></div>
-                    <div class="col-2 logo-social"><i class="fa-brands fa-apple"></i></div>
+                    <div class="col-2 logo-social   "><i class="fa-brands fa-apple"></i></div>
                     
                 </div>
                 
@@ -51,12 +51,80 @@
             </div>
         </div>
     </div>
-    
+    <a id="hiddenLink" href="/homelogined.html" style="display: none;"></a>
+    <div class="alert" id="error">
+        <i class="fa-solid fa-wifi icon"></i>
+        <div class="content_alert">
+            <div class="title">
+                Thất bại
+            </div>
+            <div class="des">
+                Đăng nhập thất bại
+            </div>
+        </div>
+        <i class="fa-solid fa-circle-xmark close"></i>
+    </div>
+    <div class="alert" id="success">
+        <i class="fa-solid fa-wifi"></i>
+        <div class="content_alert">
+            <div class="title">
+                Thành Công
+            </div>
+            <div class="des">
+                Đăng nhập thành công
+            </div>
+        </div>
+        <i class="fa-solid fa-circle-xmark close"></i>
+    </div>
+    <!-- <div class="alert" id="success">
+        <i class="fa-solid fa-wifi"></i>
+        <div class="content">
+            <div class="title">
+                Wifi Connected!
+            </div>
+            <div class="des">
+                Successfully Connected!
+            </div>
+        </div>
+        <i class="fa-solid fa-circle-xmark close"></i>
+    </div> -->
 </body>
+
 <script>
-    function loginSuccess() {
-        window.location.href = "/homelogined.html"
+    const success=document.getElementById("success")
+    const error=document.getElementById("error")
+    function opennewHTML() {
+        document.getElementById("hiddenLink").click();
     }
+    function loginCheck() {
+        const email=document.getElementById("email").value;
+        const password=document.getElementById("password").value;
+        alert(email);
+       var Check=login(email,password);
+       alert(Check);
+       if(Check)
+       {
+        alert("Đăng nhập thành công")
+        success.style.display='grid';
+        document.getElementById("hiddenLink").click();
+       }
+       else {
+        alert("Đăng nhập thất bại");
+        error.style.display='grid';
+       }
+      
+    }
+    var alerts=document.querySelectorAll('.alert');
+    alerts.forEach(item=>{
+    item.addEventListener('click',function(event){
+        if(event.target.classList.contains('close')){
+            item.style.display='none';
+        }
+    })
+})
 </script>
+
+<script src="/js/account.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
 </html>
