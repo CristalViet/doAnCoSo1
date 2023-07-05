@@ -21,7 +21,7 @@
         <div id="wrapper-content">
             <div id="content">
                 <ul id = "ul-listproduct" class="list-product">
-                    <li class="contain-info-product">
+                    <!-- <li class="contain-info-product">
                         <div class="frame">
                             <div class="img-dish">
                                 <img src="/img/chi-trang-chia-se-cach-lam-dau-hu-nhoi-thit-mon-don-gian-va-de-an-202209091444581966.jpg" alt="">
@@ -33,11 +33,11 @@
                                 <p class="dish-quantity">
                                     2
                                 </p>
-                                <i class="fa-thin fa-square-plus"></i>
+                                <i class="fa-thin fa-square-plus " onclick="addQUantity"></i>
                             </div>
                             <p class="remove">remove</p>
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <div id="checkout">
@@ -46,7 +46,7 @@
                 </div>
                 <div class="price">
                     <p class="word">Price</p>
-                    <p class="number">₫290,000</p>
+                    <p class="number cost-number">₫290,000</p>
                 </div>
                 <div class="taxes">
                     <p class="word">Taxes</p>
@@ -54,9 +54,9 @@
                 </div>
                 <div class="Subtotal">
                     <p class="word">Subtotal</p>
-                    <p class="number">₫290,000</p>
+                    <p class="number cost-number">₫290,000</p>
                 </div>
-                <div class="checkout">
+                <div class="checkout" onclick="openThanhToan()">
                     Checkout
                 </div>
             </div>
@@ -64,35 +64,179 @@
     </div>
 </body>
 <script>
+
+    var cart = JSON.parse(localStorage.getItem('cart'));
+
     function showcart() {
-        var addli = document.createElement('li')
-        var ulElement = document.getElementById('ul-listproduct')
-        var cart = JSON.parse (localStorage.getItem('cart'));
-        for (i = 0; i < cart.length; i++) {
-            var sp = cart[i];
-            var str = `
-                <li class="contain-info-product">
+    var addli = document.createElement('li');
+    addli.classList.add('contain-info-product');
+    var ulElement = document.getElementById('ul-listproduct');
+
+    for (i = 0; i < cart.length; i++) {
+        var sp = cart[i];
+        var str = `
                         <div class="frame">
                             <div class="img-dish">
                                 <img src="`+sp[3]+`" alt="">
                             </div>
-                            <p class="dish-name">`+sp[1]+`</p>
-                            <p class="dish-cost">`+sp[2]+`</p>
+                            <p class="dish-name ">`+sp[1]+`</p>
+                            <p class="dish-cost `+sp[0]+`">`+sp[2]*sp[4]+`</p>
                             <div class="quantity">
-                                <i class="fa-thin fa-square-minus"></i>
-                                <p class="dish-quantity">
+                                <i class="fa-thin fa-square-minus `+sp[0]+`"></i>
+                                <p class="dish-quantity `+sp[0]+`">
                                     `+sp[4]+`
                                 </p>
-                                <i class="fa-thin fa-square-plus"></i>
+                                <i class="fa-thin fa-square-plus `+sp[0]+`"></i>
                             </div>
-                            <p class="remove">remove</p>
+                            <p class="remove `+sp[0]+`">remove</p>
                         </div>
-                    </li>
-            `
-            addli.innerHTML = str;
-            ulElement.appendChild(addli);
+            `;
+        addli.innerHTML += str;
+        ulElement.appendChild(addli);
+    }
+}
+
+function addQUantity() {
+    var arrayAdd = document.getElementsByClassName(this.className);
+
+    for (j = 0; j < arrayAdd.length; j++) {
+        var element = arrayAdd[j];
+
+        for (k = 0; k < cart.length; k++) {
+            var product = cart[k];
+
+            if (element.classList.contains(product[0])) {
+                increaseQuantity(product[0]);
+            }
         }
     }
+}
+
+function subtractQuantity() {
+    var arrayAdd = document.getElementsByClassName(this.className);
+
+    for (j = 0; j < arrayAdd.length; j++) {
+        var element = arrayAdd[j];
+
+        for (k = 0; k < cart.length; k++) {
+            var product = cart[k];
+
+            if (element.classList.contains(product[0])) {
+                botQuantity(product[0]);
+            }
+        }
+    }
+}
+
+function increaseQuantity(id) {
+    var arrayQuantity = document.getElementsByClassName('dish-quantity');
+    var arrayCost = document.getElementsByClassName('dish-cost');
+    for (i = 0; i < arrayQuantity.length; i++) {
+        var quantity = arrayQuantity[i];
+        var cost = arrayCost[i];
+
+        for (j = 0; j < cart.length; j++) {
+            var product = cart[j];
+
+            if (product[0] === id && quantity.classList.contains(id)) {
+                cart[j][4] = cart[j][4] + 1;
+                quantity.innerHTML = cart[j][4];
+                cost.innerHTML = cart[j][4] * cart[j][2] // Cập nhật số lượng từ cart
+                showtotalcost();
+            }
+        }
+    }
+}
+
+function botQuantity(id) {
+    var arrayQuantity = document.getElementsByClassName('dish-quantity');
+    var arrayCost = document.getElementsByClassName('dish-cost');
+
+    for (i = 0; i < arrayQuantity.length; i++) {
+        var quantity = arrayQuantity[i];
+        var cost = arrayCost[i];
+
+        for (j = 0; j < cart.length; j++) {
+            var product = cart[j];
+
+            if (product[0] === id && quantity.classList.contains(id)) {
+                cart[j][4] = cart[j][4] - 1;
+                quantity.innerHTML = cart[j][4]; // Cập nhật số lượng từ cart
+                cost.innerHTML = cart[j][4] * cart[j][2]
+                showtotalcost()
+            }
+        }
+    }
+}
+
+function getClass(element) {
+    var className = element.className;
+    return className;
+}
+
+function attachEventHandlers() {
+    var plusButtons = document.getElementsByClassName('fa-square-plus');
+    var minusButtons = document.getElementsByClassName('fa-square-minus')
+    var arrayRemove = document.getElementsByClassName('remove')
+
+    for (var i = 0; i < arrayRemove.length; i++) {
+        arrayRemove[i].addEventListener('click', removeproduct);
+    }
+
+    for (var i = 0; i < plusButtons.length; i++) {
+        plusButtons[i].addEventListener('click', addQUantity);
+    }
+
+    for (var i = 0; i < minusButtons.length; i++) {
+        minusButtons[i].addEventListener('click', subtractQuantity);
+    }
+}
+
+function showtotalcost () {
+    var total = 0;
+    for(i = 0; i < cart.length; i++) {
+        var contain = 0;
+
+        contain = cart[i][2] * cart[i][4];
+
+        total = total + contain;
+    }
+
+    var totalcost = document.getElementsByClassName('cost-number')
+    for (i = 0; i < totalcost.length; i++) {
+        var element = totalcost[i];
+        element.innerHTML = "₫" + total
+    }
+}
+
+function openThanhToan() {
+    window.location.href = "/ThanhToan.html"
+}
+
+function removeproduct() {
+    var arrayRemove = document.getElementsByClassName(this.className)
+    for(i = 0; i < arrayRemove.length; i++) {
+        remove = arrayRemove[i]
+        for (j = 0;j < cart.length; j++) {
+            element = cart[j]
+            if(remove.classList.contains(element[0])) {
+                cart.splice(j,1)
+            }
+        }
+    }
+    reshowcart()
+    showtotalcost()
+}
+
+function reshowcart() {
+    var ulElement = document.getElementById('ul-listproduct');
+    ulElement.innerHTML = ""
     showcart()
+}
+
+showtotalcost()
+showcart();
+attachEventHandlers();
+
 </script>
 </html>
