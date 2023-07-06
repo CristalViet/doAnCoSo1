@@ -54,7 +54,7 @@
                 </div>
                 <div class="Subtotal">
                     <p class="word">Subtotal</p>
-                    <p class="number cost-number">₫290,000</p>
+                    <p class="number cost-number" id = "totalprovip">₫290,000</p>
                 </div>
                 <div class="checkout" onclick="openThanhToan()">
                     Checkout
@@ -66,6 +66,8 @@
 <script>
 
     var cart = JSON.parse(localStorage.getItem('cart'));
+    var totalprovip = document.getElementById('totalprovip')
+    var totalAll = 0;
 
     function showcart() {
     var addli = document.createElement('li');
@@ -142,7 +144,8 @@ function increaseQuantity(id) {
                 cart[j][4] = cart[j][4] + 1;
                 quantity.innerHTML = cart[j][4];
                 cost.innerHTML = cart[j][4] * cart[j][2] // Cập nhật số lượng từ cart
-                showtotalcost();
+                showtotalcost(totalAll);
+                localStorage.setItem('cart-2', JSON.stringify(cart));
             }
         }
     }
@@ -160,10 +163,14 @@ function botQuantity(id) {
             var product = cart[j];
 
             if (product[0] === id && quantity.classList.contains(id)) {
-                cart[j][4] = cart[j][4] - 1;
-                quantity.innerHTML = cart[j][4]; // Cập nhật số lượng từ cart
-                cost.innerHTML = cart[j][4] * cart[j][2]
-                showtotalcost()
+                if(cart[j][4] - 1 >= 0) {
+                    cart[j][4] = cart[j][4] - 1;
+                    quantity.innerHTML = cart[j][4]; // Cập nhật số lượng từ cart
+                    cost.innerHTML = cart[j][4] * cart[j][2]
+                    showtotalcost(totalAll)
+                    localStorage.setItem('cart-2', JSON.stringify(cart));
+                }
+                
             }
         }
     }
@@ -192,7 +199,7 @@ function attachEventHandlers() {
     }
 }
 
-function showtotalcost () {
+function showtotalcost (sumtotal) {
     var total = 0;
     for(i = 0; i < cart.length; i++) {
         var contain = 0;
@@ -200,12 +207,15 @@ function showtotalcost () {
         contain = cart[i][2] * cart[i][4];
 
         total = total + contain;
+        
     }
+    totalAll.value = total
 
     var totalcost = document.getElementsByClassName('cost-number')
     for (i = 0; i < totalcost.length; i++) {
         var element = totalcost[i];
         element.innerHTML = "₫" + total
+        
     }
 }
 
@@ -225,7 +235,7 @@ function removeproduct() {
         }
     }
     reshowcart()
-    showtotalcost()
+    showtotalcost(totalAll)
 }
 
 function reshowcart() {
@@ -234,7 +244,10 @@ function reshowcart() {
     showcart()
 }
 
-showtotalcost()
+
+localStorage.setItem('cart-2', JSON.stringify(cart));
+localStorage.setItem('total', totalprovip.innerHTML)
+showtotalcost(totalAll)
 showcart();
 attachEventHandlers();
 
