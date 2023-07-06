@@ -47,13 +47,13 @@
     function updateshowLanguageSelect() {
         btnlanguage.addEventListener('click', showLanguageSelect)
     }
-    readmoreBtn.addEventListener('click',()=>{
+    // readmoreBtn.addEventListener('click',()=>{
         
-        readmoreBtn.classList.add('d-none');
-        hidden_content.classList.add('d-block');
+    //     readmoreBtn.classList.add('d-none');
+    //     hidden_content.classList.add('d-block');
 
         
-    })
+    // })
     elementOfLang.forEach( lgue=>{
         lgue.addEventListener('click',()=>{
             let textLang=lgue.innerText;
