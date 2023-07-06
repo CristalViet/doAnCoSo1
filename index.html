@@ -23,10 +23,12 @@
     
         <div id="header">
             <div class="contain-header">
-
-                <div class="logo">
-                    <img src="/img/logoVKUFood.png" alt="">
-                </div>
+                <a href="/index.html">
+                    <div class="logo">
+                        <img src="/img/logoVKUFood.png" alt="">
+                    </div>
+                </a>
+                
                 <div class = "item-cart js-select-cart">
                     <div class = "contain-item">
                         <i class = "ti-shopping-cart" ></i>
@@ -138,7 +140,7 @@
                             <img src="/img/store-img/store-1.png" alt="">
                         </div>
                         <div class="store-info">
-                            <a href="/storeinterface.html"><p class="store-name">
+                            <a href="/storeinterface.html" class="text-decoration-none"><p class="store-name text-dark ">
                                 Quán cô Thắm
                             </p></a>
                             
@@ -575,10 +577,13 @@
 
     function headerChangeBackground () {
         const scrolltop = window.pageYOffset
+        console.log(scrolltop);
         if (scrolltop > 0) {
             leave.classList.add('ontop')
+            leave2.classList.add('ontop');
         }else {
             leave.classList.remove('ontop')
+            leave2.classList.remove('ontop');
         }
     }
 
@@ -599,8 +604,8 @@
         window.location.href = "/login.html"
         }
 
-        emptyCart.addEventListener('click', closeCart)
-        cart.addEventListener('click', openCart)
+        // emptyCart.addEventListener('click', closeCart)
+        // cart.addEventListener('click', openLogin())
         btnlanguage.addEventListener('click', updateshowLanguageSelect)
         btnlanguage.addEventListener('click', showLanguageSelect)
         document.addEventListener('click', unshowLanguageSelect)

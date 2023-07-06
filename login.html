@@ -65,7 +65,7 @@
         <i class="fa-solid fa-circle-xmark close"></i>
     </div>
     <div class="alert" id="success">
-        <i class="fa-solid fa-wifi"></i>
+        <i class="fa-solid fa-wifi icon"></i>
         <div class="content_alert">
             <div class="title">
                 Thành Công
@@ -99,17 +99,18 @@
     function loginCheck() {
         const email=document.getElementById("email").value;
         const password=document.getElementById("password").value;
-        alert(email);
+      
        var Check=login(email,password);
-       alert(Check);
+      
        if(Check)
        {
-        alert("Đăng nhập thành công")
+        
         success.style.display='grid';
-        document.getElementById("hiddenLink").click();
+        setTimeout( opennewHTML(),1000)
+       
        }
        else {
-        alert("Đăng nhập thất bại");
+   
         error.style.display='grid';
        }
       

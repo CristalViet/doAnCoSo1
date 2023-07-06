@@ -37,6 +37,10 @@
     box-shadow: 0 0 2px rgb(0, 0, 0, 0.3);
     background-color: white;
 }
+.contain-header.ontop {
+   
+    background-color: white;
+}
 
 #header .logo {
     float: left;
