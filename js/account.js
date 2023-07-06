@@ -4,7 +4,7 @@ array=JSON.parse(localStorage.getItem("account_list"));
 function addAccount(email,password){
     
     var taiKhoanDaTonTai=false;
-    console.log("chay toi day")
+
     console.log(array.length);
     if(array.length===null){
         array.push([email,password]);
@@ -12,7 +12,7 @@ function addAccount(email,password){
     for(i=0;i<array.length;i++){
         var sp=array[i];
         if(email==sp[0]){
-            alert('Tai khoan da ton tai');
+           
             taiKhoanDaTonTai=true;
             return false;
         }
@@ -20,7 +20,7 @@ function addAccount(email,password){
     }
     if(taiKhoanDaTonTai==false){
         array.push([email,password]);
-        alert("Them thanh cong");
+      
     localStorage.setItem('account_list',JSON.stringify(array));
 
     }

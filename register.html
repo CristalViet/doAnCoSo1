@@ -39,8 +39,8 @@
                     <label class="form-check-label" for="flexSwitchCheckDefault">Stay signed in!</label>
                   </div> -->
                 <div class="loginBtn" onclick="checkDK()">Submit</div>
-                <a id="hiddenLink" href="/setpassword.html" style="display: none;"></a>
-                <div class="row" style="align-items: center;">
+                <a id="hiddenLink" href="/homelogined.html" style="display: none;"></a>
+                <div class="row" style="align-items: center;text-align: center;">
                     <div class="divider col-5"></div>
                     <div class="col-2">OR</div>
                     <div class="divider col-5"></div>
@@ -59,7 +59,7 @@
         </div>
     </div>
     <div class="alert" id="error">
-        <i class="fa-solid fa-wifi icon"></i>
+        <i class="fa-sharp fa-solid fa-circle-exclamation icon"></i>
         <div class="content_alert">
             <div class="title">
                 Tài khoản đã tồn tại trong hệ thống
@@ -71,7 +71,7 @@
         <i class="fa-solid fa-circle-xmark close"></i>
     </div>
     <div class="alert" id="error2">
-        <i class="fa-solid fa-wifi icon"></i>
+        <i class="fa-sharp fa-solid fa-circle-exclamation icon"></i>
         <div class="content_alert">
             <div class="title">
                 Mật khẩu trước và sau không trùng nhau
@@ -83,7 +83,7 @@
         <i class="fa-solid fa-circle-xmark close"></i>
     </div>
     <div class="alert" id="success">
-        <i class="fa-solid fa-wifi"></i>
+        <i class="fa-sharp fa-solid fa-circle-check icon"></i>
         <div class="content_alert">
             <div class="title">
                 Thành Công
@@ -125,16 +125,16 @@
       const password=document.getElementById("password").value;
       const repassword=document.getElementById("repassword").value;
         if(password==repassword){
-            alert("OK");
+           
             
            if(addAccount(email.value,password))
             {   
                 success.style.display='grid';
-                setTimeout(1000);
+                // setTimeout(1000);
                 opennewHTML;
             }
             else {
-                alert("Tài khoản đã tồn tại");
+            
                 error.style.display='grid';
 
             } 

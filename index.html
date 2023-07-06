@@ -53,13 +53,25 @@
                     
                     
                 </div>
-
+                <div class="menu_mobile">
+                    
+                    <i class="fa-solid fa-bars btn_menu_mobile"></i>
+                    <div class="menu_mobile_panel ">
+                        <ul>
+                            <a href="/cart.html" ><li>Giỏ hàng</li></a>
+                            <a href="/login.html" ><li>Đăng nhập/Đăng ký</li></a>
+                            <a href=""> <li>Đổi ngôn ngữ</li></a>
+                           
+                        </ul>
+                    </div>
+                </div>
+                
             </div>
             
         </div>
     
     
-    <div class="container-cart">
+    <!-- <div class="container-cart">
         <div class="container-cart empty js-close-cart">
                 
         </div>
@@ -109,7 +121,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     
     <div id="content">
         <div class="content-background">
@@ -510,14 +522,15 @@
     
     const item_language=document.querySelector('.item-language')
     const language = document.querySelector('.js-select-language')
-    
+    const menu_mobile=document.querySelector('.menu_mobile')
+    const menu_mobile_panel=menu_mobile.querySelector('.menu_mobile_panel')
     const leave = document.getElementById("header")
     const leave2 = document.querySelector(".contain-header"), 
     elementOfLang=sublanguage.querySelectorAll('.lg'),
     sBtn=language.querySelector('.sBtn'),
     readmoreBtn=document.querySelector('.readmore');
     hidden_content=document.querySelector('.content-hidden')
-
+    const content_Panel = document.getElementById('content') 
     var sliderItems = document.querySelectorAll('.content-background');
     var currentSlide = 0;
     var imagePaths = [
@@ -525,7 +538,14 @@
         '/img/slider2.jpg',
         '/img/slider3.jpg'
     ];
-
+    menu_mobile.addEventListener("click",function(){
+        menu_mobile_panel.classList.toggle('open');
+       content_Panel.onclick=function(){
+        menu_mobile_panel.classList.remove('open')
+       }
+     
+ 
+    });
     function changeSlide() {
         sliderItems.forEach(function(item) {
             item.style.backgroundImage = "url('" + imagePaths[currentSlide] + "')";
@@ -579,11 +599,13 @@
         const scrolltop = window.pageYOffset
         console.log(scrolltop);
         if (scrolltop > 0) {
+            
+            // leave2.classList.add('ontop');
             leave.classList.add('ontop')
-            leave2.classList.add('ontop');
         }else {
+            
+            // leave2.classList.remove('ontop');
             leave.classList.remove('ontop')
-            leave2.classList.remove('ontop');
         }
     }
 
@@ -618,7 +640,7 @@
     // language.addEventListener('click', showLanguageSelect)
     // document.addEventListener('click', unshowLanguageSelect)
         window.addEventListener('scroll', headerChangeBackground)
-
+        
 </script>
 <!-- slick slider -->
 
@@ -635,6 +657,9 @@
   speed: 300,
   slidesToShow: 4,
   slidesToScroll: 4,
+  arrows:false,
+  autoplay: true,
+  autoplaySpeed: 1000,
   responsive: [
     {
       breakpoint: 1024,
@@ -642,7 +667,8 @@
         slidesToShow: 2,
         slidesToScroll: 2,
         infinite: true,
-        dots: true,
+        
+        dots: false,
         arrows:false
       }
     },
@@ -651,7 +677,8 @@
       breakpoint: 850,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        dots: false,
       }
     }
     // You can unslick at a given breakpoint now by adding:
