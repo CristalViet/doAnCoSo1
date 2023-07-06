@@ -24,41 +24,38 @@
 </head>
 <body>
     <div id="header">
-      <div class="contain-header">
         <div class="logo">
-          <a href="/index.html"><img src="/img/logoVKUFood.png" alt=""></a> 
-       </div>
-       <div class="header-right">
-         <div class = "item-cart js-select-cart" onclick="roadtocard()">
-           <div class = "contain-item">
-               <i class = "ti-shopping-cart" ></i>
-           </div>
-           <div id="count-quantity" class="quantity-hidden">
-             
-           </div>
-         </div>
-         <div class = "item-login-out2" onclick="openLogin()" >
-           <p>Đăng Nhập/Đăng kí</p>
-         </div>
-         <div class = "item-language">
-           <button class = "a-item-language js-select-language"><span class = "sBtn">vi</span>
-               <ul class = "sub-language">
-                   <li class = "lg-tv lg">
-                       Tiếng Việt
-                   </li>
-                   <li class = "lg-ta lg">
-                       English
-                   </li>
-               </ul>
-               <i class = "ti-angle-down"></i>
-           </button>
-         </div>
-         <div class="menu-mobile">
-           <i class="fa-solid fa-bars"></i>
-         </div>
-       </div>
-      </div>
-        
+           <a href="/index.html"><img src="/img/logoVKUFood.png" alt=""></a> 
+        </div>
+        <div class="header-right">
+          <div class = "item-cart js-select-cart" onclick="roadtocard()">
+            <div class = "contain-item">
+                <i class = "ti-shopping-cart" ></i>
+            </div>
+            <div id="count-quantity" class="quantity-hidden">
+              
+            </div>
+          </div>
+          <div class = "item-login-out2" onclick="openLogin()" >
+            <p>Đăng Nhập/Đăng kí</p>
+          </div>
+          <div class = "item-language">
+            <button class = "a-item-language js-select-language"><span class = "sBtn">vi</span>
+                <ul class = "sub-language">
+                    <li class = "lg-tv lg">
+                        Tiếng Việt
+                    </li>
+                    <li class = "lg-ta lg">
+                        English
+                    </li>
+                </ul>
+                <i class = "ti-angle-down"></i>
+            </button>
+          </div>
+          <div class="menu-mobile">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
         
         
         
@@ -509,17 +506,7 @@
     sBtn=language.querySelector('.sBtn'),
     readmoreBtn=document.querySelector('.readmore');
     hidden_content=document.querySelector('.content-hidden')
-        //THêm 
-      const menu_mobile=document.querySelector('.menu_mobile')
-    const menu_mobile_panel=menu_mobile.querySelector('.menu_mobile_panel')
-    menu_mobile.addEventListener("click",function(){
-        menu_mobile_panel.classList.toggle('open');
-       content_Panel.onclick=function(){
-        menu_mobile_panel.classList.remove('open')
-       }
-     
- 
-    });
+        
     function showLanguageSelect() {
         sublanguage.classList.add('open')
         // item_language.classList.add('arrow-down')

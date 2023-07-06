@@ -144,3 +144,9 @@ body{
         display: block;
     }
 }
+.contain-header{
+    justify-content: space-between;
+}
+#content{
+    width: 80%;
+}
